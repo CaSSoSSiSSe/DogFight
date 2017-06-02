@@ -5,6 +5,7 @@ import java.util.Observable;
 public class DogfightView implements IViewSystem, Runnable {
 
 	public DogfightView(final IOrderPerformer orderPerformer, final IDogfightModel dogfightModel, final Observable observable){
+		super(orderPerformer, dogfightModel, observable);
 	}
 
 	@Override
