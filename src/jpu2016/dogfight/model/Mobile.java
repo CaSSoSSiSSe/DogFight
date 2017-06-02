@@ -3,7 +3,6 @@ package jpu2016.dogfight.model;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Image;
-import java.awt.Point;
 import java.io.File;
 import java.io.IOException;
 
@@ -34,7 +33,7 @@ public class Mobile implements IMobile{
 	}
 
 	@Override
-	public Point getPosition() {
+	public Position getPosition() {
 		// TODO Auto-generated method stub
 		return null;
 	}
@@ -114,19 +113,19 @@ public class Mobile implements IMobile{
 	}
 
 	private void moveUp(){
-
+		this.getPosition().setY(this.getPosition().getY() + this.getSpeed());
 	}
 
 	private void moveRight(){
-
+		this.getPosition().setX(this.getPosition().getX() + this.getSpeed());
 	}
 
 	private void moveLeft(){
-
+		this.getPosition().setX(this.getPosition().getX() - this.getSpeed());
 	}
 
 	private void moveDown(){
-
+		this.getPosition().setY(this.getPosition().getY() - this.getSpeed());
 	}
 
 	public void buildAllImages()throws IOException{
@@ -135,6 +134,5 @@ public class Mobile implements IMobile{
 		this.image[Direction.DOWN.ordinal()] = ImageIO.read(new File("image/F4U_DOWN.png"));
 		this.image[Direction.LEFT.ordinal()] = ImageIO.read(new File("image/F4U_LEFT.png"));
 		this.image[Direction.RIGHT.ordinal()] = ImageIO.read(new File("image/F4U_RIGHT.png"));
-
 	}
 }

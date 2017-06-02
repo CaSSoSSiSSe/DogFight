@@ -2,13 +2,14 @@ package jpu2016.dogfight.model;
 
 import java.awt.Dimension;
 import java.awt.Image;
-import java.awt.Point;
+
+import javafx.geometry.Pos;
 
 public interface IMobile {
 
 	public Direction getDirection();
 	public void setDirection(Direction direction);
-	public Point getPosition();
+	public Position getPosition();
 	public Dimension getDimension();
 	public int getWidth();
 	public int getHeight();
