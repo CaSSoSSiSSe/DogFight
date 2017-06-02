@@ -2,15 +2,16 @@ package jpu2016.dogfight.model;
 
 import java.awt.Dimension;
 
-public class Missile {
+public class Missile extends Mobile{
 	private static int SPEED = 4;
 	private static int WIDTH = 30;
 	private static int HEIGHT = 10;
 	private static int MAX_DISTANCE_TRAVELED = 1400;
 	private static String IMAGE = "missile";
 
-	public Missile(Direction direction, Dimension dimension){
-		return;
+	public Missile(final Direction direction, final Position position){
+		super(direction, position, new Dimension(WIDTH,HEIGHT), SPEED, IMAGE);
+
 	}
 
 	public static int getWIDTH() {
@@ -21,6 +22,7 @@ public class Missile {
 		return HEIGHT;
 	}
 
+	@Override
 	public void move(){
 		return;
 	}
