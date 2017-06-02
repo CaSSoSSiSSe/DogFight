@@ -9,16 +9,19 @@ public class Plane extends Mobile{
 	private int player;
 
 
-	public Plane(Direction direction, Position position, String image){
+	public Plane(final Direction direction, final Position position, final String image){
 		super(direction, position, new Dimension(WIDTH,HEIGHT), SPEED, image);
 	}
 
+	@Override
+	public boolean isPlayer(final int player){
+		return true;
+	}
 
-
-
-
-
-
+	@Override
+	public boolean hit(){
+		return true;
+	}
 
 
 
