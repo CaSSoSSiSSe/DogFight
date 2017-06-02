@@ -8,6 +8,7 @@ import gameframe.IEventPerformer;
 public class EventPerformer implements IEventPerformer {
 
 	EventPerformer (final IOrderPerformer orderPerformer) {
+		super(orderPerformer);
 	}
 
 	@Override
