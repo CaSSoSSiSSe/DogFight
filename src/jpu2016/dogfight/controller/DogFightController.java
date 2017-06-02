@@ -1,13 +1,15 @@
 package jpu2016.dogfight.controller;
 
+import dogfight.view.IViewSystem;
+import jpu2016.dogfight.model.IDogfightModel;
+
 public class DogFightController implements IOrderPerformer {
 
 	private static int TIME_SLEEP = 30;
-	private final IDogfightModel doghtfightModel;
 
 
 	public DogFightController(final IDogfightModel doghtfightModel){
-		this.doghtfightModel = doghtfightModel;
+		super();
 	}
 
 	@Override
