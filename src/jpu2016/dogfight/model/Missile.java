@@ -14,11 +14,11 @@ public class Missile extends Mobile{
 
 	}
 
-	public static int getWIDTH() {
+	public static int getWidthWithADirection(Direction direction) {
 		return WIDTH;
 	}
 
-	public static int getHEIGHT() {
+	public static int getHeightWithADirection(Direction direction) {
 		return HEIGHT;
 	}
 
