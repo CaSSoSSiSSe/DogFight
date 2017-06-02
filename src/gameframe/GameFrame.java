@@ -7,6 +7,7 @@ import java.util.Observable;
 public class GameFrame implements KeyListener {
 
 	public GameFrame(final String title, final IEventPerformer performer, final IGraphicsBuilder graphicBuilder, final Observable observable){
+		super();
 	}
 
 	@Override
