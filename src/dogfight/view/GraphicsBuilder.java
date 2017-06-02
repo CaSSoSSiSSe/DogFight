@@ -8,6 +8,7 @@ import gameframe.IGraphicsBuilder;
 public class GraphicsBuilder implements IGraphicsBuilder {
 
 	public GraphicsBuilder(final IDogfightModel dogfightModel){
+		super(dogfightModel);
 	}
 
 	@Override
