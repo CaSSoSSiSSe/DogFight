@@ -49,6 +49,5 @@ public class DogfightModel extends Observable implements IDogfightModel{
 	@Override
 	public void setMobilesHavesMoved() {
 		// TODO Auto-generated method stub
-
 	}
 }
