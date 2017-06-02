@@ -4,11 +4,13 @@ import java.awt.Graphics;
 import java.awt.image.ImageObserver;
 
 import gameframe.IGraphicsBuilder;
+import jpu2016.dogfight.model.IDogfightModel;
+import jpu2016.dogfight.model.IMobile;
 
 public class GraphicsBuilder implements IGraphicsBuilder {
 
 	public GraphicsBuilder(final IDogfightModel dogfightModel){
-		super(dogfightModel);
+		super();
 	}
 
 	@Override

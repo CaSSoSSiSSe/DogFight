@@ -1,6 +1,6 @@
 package gameframe;
 
-import com.sun.glass.events.KeyEvent;
+import java.awt.event.KeyEvent;
 
 public interface IEventPerformer {
 
