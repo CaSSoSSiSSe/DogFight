@@ -10,14 +10,17 @@ import javax.imageio.ImageIO;
 
 public class Mobile implements IMobile{
 
-	private Object[] image = null;
+	private final Position position;
+	private final Dimension dimension;
+	private final String imageName;
+	private Image[] images;
 
 	public Mobile(Direction direction, Position position, Dimension dimension, int speed, String image){
 		this.setDirection(direction);
-		this.getPosition();
-		this.getDimension();
+		this.position = position;
+		this.dimension = dimension;
 		this.getSpeed();
-		this.getImage();
+		this.imageName = image;
 	}
 
 	@Override
@@ -98,8 +101,8 @@ public class Mobile implements IMobile{
 
 	@Override
 	public boolean hit() {
-		// TODO Auto-generated method stub
-		return false;
+		this.getDogfightModel().removeMobile(this);
+		return true;
 	}
 
 	@Override
@@ -129,10 +132,10 @@ public class Mobile implements IMobile{
 	}
 
 	public void buildAllImages()throws IOException{
-		this.image = new Image[4];
-		this.image[Direction.UP.ordinal()] = ImageIO.read(new File("images/F4U_UP.png"));
-		this.image[Direction.DOWN.ordinal()] = ImageIO.read(new File("image/F4U_DOWN.png"));
-		this.image[Direction.LEFT.ordinal()] = ImageIO.read(new File("image/F4U_LEFT.png"));
-		this.image[Direction.RIGHT.ordinal()] = ImageIO.read(new File("image/F4U_RIGHT.png"));
+		this.images = new Image[4];
+		this.images[Direction.UP.ordinal()] = ImageIO.read(new File("images/" + this.imageName + "_UP.png"));
+		this.images[Direction.DOWN.ordinal()] = ImageIO.read(new File("image/" + this.imageName + "_DOWN.png"));
+		this.images[Direction.LEFT.ordinal()] = ImageIO.read(new File("image/" + this.imageName + "_LEFT.png"));
+		this.images[Direction.RIGHT.ordinal()] = ImageIO.read(new File("image/" + this.imageName + "_RIGHT.png"));
 	}
 }
