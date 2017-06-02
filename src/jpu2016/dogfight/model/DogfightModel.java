@@ -2,8 +2,9 @@ package jpu2016.dogfight.model;
 
 import java.awt.Dimension;
 import java.util.ArrayList;
+import java.util.Observable;
 
-public class DogfightModel implements IDogfightModel{
+public class DogfightModel extends Observable implements IDogfightModel{
 
 	public DogfightModel(){
 		return ;
@@ -16,19 +17,19 @@ public class DogfightModel implements IDogfightModel{
 	}
 
 	@Override
-	public void buildArea(Dimension dimension) {
+	public void buildArea(final Dimension dimension) {
 		// TODO Auto-generated method stub
 
 	}
 
 	@Override
-	public void addMobile(IMobile Mobile) {
+	public void addMobile(final IMobile Mobile) {
 		// TODO Auto-generated method stub
 
 	}
 
 	@Override
-	public void removeMobile(IMobile Mobile) {
+	public void removeMobile(final IMobile Mobile) {
 		// TODO Auto-generated method stub
 
 	}
@@ -40,7 +41,7 @@ public class DogfightModel implements IDogfightModel{
 	}
 
 	@Override
-	public IMobile getMobileByPlayer(int Player) {
+	public IMobile getMobileByPlayer(final int Player) {
 		// TODO Auto-generated method stub
 		return null;
 	}

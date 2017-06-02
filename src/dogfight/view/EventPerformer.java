@@ -1,23 +1,25 @@
 package dogfight.view;
 
-import java.awt.Graphics;
-import java.awt.image.ImageObserver;
+import java.awt.event.KeyEvent;
 
 import gameframe.IEventPerformer;
+import jpu2016.dogfight.controller.IOrderPerformer;
+import jpu2016.dogfight.controller.UserOrder;
 
 public class EventPerformer implements IEventPerformer {
 
-	EventPerformer (final IOrderPerformer orderPerformer) {
-		super(orderPerformer);
+	public EventPerformer (final IOrderPerformer orderPerformer) {
+		super();
+	}
+
+	private UserOrder keyCodeToUserOrder(final int keyCode){
+		return this.keyCodeToUserOrder(keyCode);
 	}
 
 	@Override
-	public void eventPerform(final com.sun.glass.events.KeyEvent keyCode) {
+	public void eventPerform(final KeyEvent keyCode) {
 		// TODO Auto-generated method stub
-	}
-	
-	
-	private UserOrder keyCodeToUserOrder(final int keyCode){
+
 	}
 
 }
