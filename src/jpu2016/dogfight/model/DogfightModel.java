@@ -5,6 +5,10 @@ import java.util.ArrayList;
 
 public class DogfightModel implements IDogfightModel{
 
+	public DogfightModel(){
+		return ;
+	}
+
 	@Override
 	public IArea getArea() {
 		// TODO Auto-generated method stub
