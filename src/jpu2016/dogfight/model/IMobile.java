@@ -7,7 +7,7 @@ import java.awt.Point;
 public interface IMobile {
 
 	public Direction getDirection();
-	public void setDIrection(Direction direction);
+	public void setDirection(Direction direction);
 	public Point getPosition();
 	public Dimension getDimension();
 	public int getWidth();
@@ -20,5 +20,4 @@ public interface IMobile {
 	public void setDogfightModel(DogfightModel dogfightModel);
 	public boolean hit();
 	public boolean isWeapon();
-
 }

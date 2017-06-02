@@ -6,23 +6,21 @@ public class Plane extends Mobile{
 	private static int SPEED = 2;
 	private static int WIDTH = 100;
 	private static int HEIGHT = 30;
-	private int player;
+	private final int player;
 
-
-	public Plane(final Direction direction, final Position position, final String image){
+	public Plane(final Direction direction, final Position position, final String image, int player){
 		super(direction, position, new Dimension(WIDTH,HEIGHT), SPEED, image);
+		this.player = player;
 	}
 
 	@Override
 	public boolean isPlayer(final int player){
-		return true;
+		return this.player == player;
 	}
 
 	@Override
 	public boolean hit(){
+		//	this.getDogfightModel().removeMobile(Mobile);
 		return true;
 	}
-
-
-
 }

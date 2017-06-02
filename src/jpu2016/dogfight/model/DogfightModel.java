@@ -6,32 +6,31 @@ import java.util.Observable;
 
 public class DogfightModel extends Observable implements IDogfightModel{
 
+	private Sky sky;
+	private final ArrayList<IMobile> mobiles;
+
 	public DogfightModel(){
-		return ;
+		this.mobiles = new ArrayList<IMobile>();
 	}
 
 	@Override
 	public IArea getArea() {
-		// TODO Auto-generated method stub
-		return null;
+		return this.sky;
 	}
 
 	@Override
 	public void buildArea(final Dimension dimension) {
-		// TODO Auto-generated method stub
-
+		this.sky = new Sky(dimension);
 	}
 
 	@Override
 	public void addMobile(final IMobile Mobile) {
-		// TODO Auto-generated method stub
-
+		this.getMobiles().add(Mobile);
 	}
 
 	@Override
 	public void removeMobile(final IMobile Mobile) {
-		// TODO Auto-generated method stub
-
+		this.getMobiles().remove(this.mobiles);
 	}
 
 	@Override
@@ -42,12 +41,17 @@ public class DogfightModel extends Observable implements IDogfightModel{
 
 	@Override
 	public IMobile getMobileByPlayer(final int Player) {
-		// TODO Auto-generated method stub
+		for(final IMobile mobile : this.mobiles){
+			if(mobile.isPlayer(Player)){
+				return mobile;
+			}
+		}
 		return null;
 	}
 
 	@Override
 	public void setMobilesHavesMoved() {
-		// TODO Auto-generated method stub
+		this.setChanged();
+		this.notifyObservers();
 	}
 }

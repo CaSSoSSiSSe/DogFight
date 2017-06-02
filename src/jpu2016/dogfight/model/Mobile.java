@@ -4,11 +4,21 @@ import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Image;
 import java.awt.Point;
+import java.io.File;
+import java.io.IOException;
+
+import javax.imageio.ImageIO;
 
 public class Mobile implements IMobile{
 
-	public Mobile(Direction direction, Position position, Dimension dimension, int speed, String image){
+	private Object[] image = null;
 
+	public Mobile(Direction direction, Position position, Dimension dimension, int speed, String image){
+		this.setDirection(direction);
+		this.getPosition();
+		this.getDimension();
+		this.getSpeed();
+		this.getImage();
 	}
 
 	@Override
@@ -18,7 +28,7 @@ public class Mobile implements IMobile{
 	}
 
 	@Override
-	public void setDIrection(Direction direction) {
+	public void setDirection(Direction direction) {
 		// TODO Auto-generated method stub
 
 	}
@@ -116,6 +126,15 @@ public class Mobile implements IMobile{
 	}
 
 	private void moveDown(){
+
+	}
+
+	public void buildAllImages()throws IOException{
+		this.image = new Image[4];
+		this.image[Direction.UP.ordinal()] = ImageIO.read(new File("images/F4U_UP.png"));
+		this.image[Direction.DOWN.ordinal()] = ImageIO.read(new File("image/F4U_DOWN.png"));
+		this.image[Direction.LEFT.ordinal()] = ImageIO.read(new File("image/F4U_LEFT.png"));
+		this.image[Direction.RIGHT.ordinal()] = ImageIO.read(new File("image/F4U_RIGHT.png"));
 
 	}
 }
