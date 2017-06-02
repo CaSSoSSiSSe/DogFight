@@ -6,6 +6,7 @@ import java.util.Observer;
 public class GamePanel implements Observer{
 
 	public GamePanel(final IGraphicsBuilder graphicBuilder){
+		super();
 	}
 
 	@Override
