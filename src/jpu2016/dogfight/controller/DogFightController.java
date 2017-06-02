@@ -3,10 +3,10 @@ package jpu2016.dogfight.controller;
 public class DogFightController implements IOrderPerformer {
 
 	private static int TIME_SLEEP = 30;
-	private final IDogFightModel doghtfightModel;
+	private final IDogfightModel doghtfightModel;
 
 
-	public DogFightController(final IDogFightModel doghtfightModel){
+	public DogFightController(final IDogfightModel doghtfightModel){
 		this.doghtfightModel = doghtfightModel;
 	}
 
